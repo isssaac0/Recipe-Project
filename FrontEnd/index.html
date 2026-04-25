@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lovely Cuisine</title>
+<link rel="stylesheet" href="CSS/style.css">
+<link rel="icon" href="data:,">
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+<div class="cursor-glow"></div>
+
+<div id="app">
+
+<!-- ================= HEADER ================= -->
+<header class="topbar">
+
+<div class="logo">Lovely Cuisine</div>
+
+<div class="search-wrap">
+
+<select id="filterCuisine" class="city-select">
+<option value="">All Cuisines</option>
+<option value="Indian">Indian</option>
+<option value="Italian">Italian</option>
+<option value="Chinese">Chinese</option>
+<option value="French">French</option>
+</select>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search recipes, cuisines or ingredients"
+>
+
+</div>
+
+<div class="top-actions">
+<a href="profile.html">My Profile</a>
+<a href="#" id="logoutBtn">Logout</a>
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero-banner">
+
+<div class="hero-left">
+
+<p class="hero-tag">Luxury Culinary Platform</p>
+
+<h1>
+Discover Premium Recipes <br>
+Crafted For Every Taste
+</h1>
+
+<p>
+Browse elegant dishes, explore global cuisines,
+and build your personal collection.
+</p>
+
+<div class="hero-buttons">
+
+<a href="create.html" class="primary-btn">
++ Create Recipe
+</a>
+
+<a href="#recipesSection" class="secondary-btn">
+Browse Recipes
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-stat">
+<h3 id="totalRecipes">0</h3>
+<span>Recipes</span>
+</div>
+
+<div class="hero-stat">
+<h3>18+</h3>
+<span>Cuisines</span>
+</div>
+
+<div class="hero-stat">
+<h3>Fast</h3>
+<span>Search</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CATEGORY FILTERS ================= -->
+<section class="tabs-row">
+
+<button class="tab active" id="allRecipesBtn">
+All Recipes
+</button>
+
+<button class="tab" id="quickMealsBtn">
+Quick Meals
+</button>
+
+<button class="tab" id="healthyBtn">
+Healthy
+</button>
+
+<button class="tab" id="dessertsBtn">
+Desserts
+</button>
+
+</section>
+
+<!-- ================= EXTRA FILTERS ================= -->
+<section class="chips-row">
+
+<button class="chip" id="filterBtn">
+Apply Filters
+</button>
+
+<select id="filterDifficulty" class="chip-select">
+<option value="">Difficulty</option>
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
+</select>
+
+<button class="chip" id="vegBtn">
+Veg Friendly
+</button>
+
+<button class="chip" id="quickBtn">
+Under 30 Min
+</button>
+
+<button class="chip" id="popularBtn">
+Popular
+</button>
+
+</section>
+
+<!-- ================= TITLE ================= -->
+<section class="content-head" id="recipesSection">
+
+<div>
+<h1>Your Recipe Collection</h1>
+<p>Explore curated dishes from your kitchen.</p>
+</div>
+
+<a href="create.html" class="primary-btn">
++ Create Recipe
+</a>
+
+</section>
+
+<!-- ================= RECIPE GRID ================= -->
+<main class="content-area">
+
+<div id="recipes" class="recipes-grid"></div>
+
+</main>
+
+<!-- ================= PAGINATION ================= -->
+<section class="pagination">
+
+<button id="prevPage">Previous</button>
+
+<span id="pageNumber">Page 1</span>
+
+<button id="nextPage">Next</button>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section class="feature-strip">
+
+<div class="feature-box">
+<h3>Global Cuisines</h3>
+<p>Discover flavors from around the world.</p>
+</div>
+
+<div class="feature-box">
+<h3>Easy Filters</h3>
+<p>Find healthy, quick and popular meals instantly.</p>
+</div>
+
+<div class="feature-box">
+<h3>Create Freely</h3>
+<p>Publish your own recipes beautifully.</p>
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+<h3>Lovely Cuisine</h3>
+<p>Luxury recipe experience for modern food lovers.</p>
+</div>
+
+<div>
+<h4>Company</h4>
+<a href="#">About Us</a>
+<a href="#">Contact Us</a>
+<a href="#">Privacy Policy</a>
+</div>
+
+<div>
+<h4>Support</h4>
+<a href="#">Help Center</a>
+<a href="#">Email Us</a>
+<a href="#">Careers</a>
+</div>
+
+<div>
+<h4>Social</h4>
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+<a href="#">YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Lovely Cuisine. All rights reserved.
+</div>
+
+</footer>
+
+</div>
+
+<script type="module" src="JS/app.js"></script>
+
+</body>
+</html>

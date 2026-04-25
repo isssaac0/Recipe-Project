@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Recipe | Élan Cuisine</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+<div class="cursor-glow"></div>
+
+<div id="app">
+
+<!-- HEADER -->
+<header class="topbar">
+
+<div class="logo">Élan Cuisine</div>
+
+<div class="search-wrap">
+<input type="text" placeholder="Create your recipe..." disabled>
+</div>
+
+<div class="top-actions">
+<a href="index.html">Home</a>
+<a href="#" id="logoutBtn">Logout</a>
+</div>
+
+</header>
+
+<!-- HERO -->
+<section class="creator-hero">
+
+<div class="creator-hero-left">
+<p class="hero-tag">Creator Studio</p>
+<h1>Create Your Own Recipe</h1>
+<p>
+Add recipe details, ingredients, cooking steps and upload tutorial video.
+</p>
+</div>
+
+<div class="creator-progress">
+
+<div class="progress-step">
+<span>1</span>
+<div>
+<h4>Recipe</h4>
+<p>Basic details</p>
+</div>
+</div>
+
+<div class="progress-step">
+<span>2</span>
+<div>
+<h4>Ingredients</h4>
+<p>Items + quantity</p>
+</div>
+</div>
+
+<div class="progress-step">
+<span>3</span>
+<div>
+<h4>Publish</h4>
+<p>Share recipe</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- MAIN -->
+<section class="creator-layout">
+
+<!-- LEFT -->
+<div>
+
+<form id="form">
+
+<!-- RECIPE INFO -->
+<div class="elite-card">
+
+<div class="elite-head">
+<span>01</span>
+<div>
+<h3>Recipe Information</h3>
+<p>Enter recipe details</p>
+</div>
+</div>
+
+<div class="creator-grid">
+
+<input type="text" id="title" placeholder="Recipe Title" required>
+
+<input type="text" id="cuisine" placeholder="Cuisine">
+
+<select id="difficulty">
+<option value="easy">Easy</option>
+<option value="medium">Medium</option>
+<option value="hard">Hard</option>
+</select>
+
+<select id="category">
+<option value="main course">Main Course</option>
+<option value="quick meal">Quick Meal</option>
+<option value="healthy">Healthy</option>
+<option value="dessert">Dessert</option>
+</select>
+
+<input type="number" id="prepTime" placeholder="Preparation Time (Min)">
+
+<input type="number" id="servings" placeholder="Servings">
+
+</div>
+
+<div class="option-row">
+
+<label class="check-row">
+<input type="checkbox" id="isVeg">
+Vegetarian
+</label>
+
+<label class="check-row">
+<input type="checkbox" id="isPopular">
+Popular Recipe
+</label>
+
+</div>
+
+</div>
+
+<!-- INGREDIENTS -->
+<div class="elite-card">
+
+<div class="elite-head">
+<span>02</span>
+<div>
+<h3>Ingredients</h3>
+<p>Add ingredient rows</p>
+</div>
+</div>
+
+<div id="ingredientList">
+
+<div class="ingredient-row">
+
+<input type="text" class="ingredient-name" placeholder="Ingredient">
+
+<input type="number" class="ingredient-qty" placeholder="Qty">
+
+<select class="ingredient-unit">
+<option value="g">g</option>
+<option value="kg">kg</option>
+<option value="ml">ml</option>
+<option value="l">l</option>
+<option value="cup">cup</option>
+<option value="pcs">pcs</option>
+</select>
+
+</div>
+
+</div>
+
+<br>
+
+<button type="button" id="addIngredientBtn" class="secondary-btn">
++ Add Ingredient
+</button>
+
+</div>
+
+<!-- STEPS -->
+<div class="elite-card">
+
+<div class="elite-head">
+<span>03</span>
+<div>
+<h3>Cooking Steps</h3>
+<p>Explain recipe process</p>
+</div>
+</div>
+
+<textarea
+id="description"
+placeholder="1. Heat oil...
+2. Add onions...
+3. Cook well..."
+></textarea>
+
+</div>
+
+<!-- ACTION BAR -->
+<div class="publish-bar">
+
+<a href="index.html" class="secondary-btn">
+Cancel
+</a>
+
+<button type="button" id="draftBtn" class="secondary-btn">
+Save Draft
+</button>
+
+<button type="submit" form="form" class="publish-btn">
+Publish Recipe
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+<!-- RIGHT -->
+<div>
+
+<!-- VIDEO -->
+<div class="elite-card">
+
+<div class="elite-head">
+<span>🎥</span>
+<div>
+<h3>Video Tutorial</h3>
+<p>Upload your recipe tutorial</p>
+</div>
+</div>
+
+<input
+type="file"
+id="recipeVideo"
+accept="video/*"
+>
+
+<p style="margin-top:12px;color:#777;">
+Supported: MP4, MOV, WEBM
+</p>
+
+</div>
+
+<!-- NOTES -->
+<div class="elite-card">
+
+<div class="elite-head">
+<span>★</span>
+<div>
+<h3>Creator Tips</h3>
+<p>Make it premium</p>
+</div>
+</div>
+
+<ul class="tips-list">
+<li>Use clear recipe title</li>
+<li>Add exact quantities</li>
+<li>Keep steps short</li>
+<li>Upload clean video</li>
+<li>Select right category</li>
+</ul>
+
+</div>
+
+<!-- INFO -->
+<div class="elite-card">
+
+<p style="margin:0;color:#777;line-height:1.7;">
+Recipe images are fetched automatically using TheMealDB integration.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+<h3>Élan Cuisine</h3>
+<p>Create and share premium recipes.</p>
+</div>
+
+<div>
+<h4>Explore</h4>
+<a href="index.html">Home</a>
+<a href="#">Recipes</a>
+</div>
+
+<div>
+<h4>Support</h4>
+<a href="#">Contact</a>
+<a href="#">Help</a>
+</div>
+
+<div>
+<h4>Social</h4>
+<a href="#">Instagram</a>
+<a href="#">YouTube</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Élan Cuisine. All rights reserved.
+</div>
+
+</footer>
+
+</div>
+
+<script type="module" src="JS/create.js"></script>
+
+</body>
+</html>
