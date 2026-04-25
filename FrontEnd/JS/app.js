@@ -6,23 +6,23 @@ const API = "https://recipe-backend-8s7p.onrender.com/api/recipes";
    IMAGE MAP
 =================================== */
 const imageMap = {
-"Paneer Butter Masala":"images/paneer.jpg",
- "Chocolate Cake":"images/cake.jpg", 
- "Veg Biryani":"images/biryani.jpg",
-  "Burger":"images/burger.jpg", 
-  "Noodles":"images/noodles.jpg", 
-  "Tea":"images/tea.jpg",
-   "Samosa":"images/samosa.jpg",
-    "Margherita Pizza":"images/pizza.jpg",
-     "Kheer":"images/kheer.jpg", 
-     "Fried Rice":"images/friedrice.jpg", 
-     "Croissant":"images/croissant.jpg",
-      "Sushi Rolls":"images/sushi.jpg", 
-      "Tacos":"images/tacos.jpg",
- "Chicken Alfredo Pasta":"images/pasta.jpg", 
- "Fruit Custard":"images/custard.jpg",
- "Masala Dosa":"images/dosa.jpg",
- "Veg Sandwich":"/images/sandwich.jpg"
+"Paneer Butter Masala":"Images/paneer.jpg",
+ "Chocolate Cake":"Images/cake.jpg", 
+ "Veg Biryani":"Images/biryani.jpg",
+  "Burger":"Images/burger.jpg", 
+  "Noodles":"Images/noodles.jpg", 
+  "Tea":"Images/tea.jpg",
+   "Samosa":"Images/samosa.jpg",
+    "Margherita Pizza":"Images/pizza.jpg",
+     "Kheer":"Images/kheer.jpg", 
+     "Fried Rice":"Images/friedrice.jpg", 
+     "Croissant":"Images/croissant.jpg",
+      "Sushi Rolls":"Images/sushi.jpg", 
+      "Tacos":"Images/tacos.jpg",
+ "Chicken Alfredo Pasta":"Images/pasta.jpg", 
+ "Fruit Custard":"Images/custard.jpg",
+ "Masala Dosa":"Images/dosa.jpg",
+ "Veg Sandwich":"/Images/sandwich.jpg"
 };
 
 /* ===================================
