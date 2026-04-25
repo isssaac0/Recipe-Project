@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-const API = "https://recipe-backend-8s7p.onrender.com";
+const API = "https://recipe-backend-8s7p.onrender.com/api/recipes";
 
 /* ===================================
    IMAGE MAP
