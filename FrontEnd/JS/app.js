@@ -22,7 +22,11 @@ const imageMap = {
  "Chicken Alfredo Pasta":"Images/pasta.jpg", 
  "Fruit Custard":"Images/custard.jpg",
  "Masala Dosa":"Images/dosa.jpg",
- "Veg Sandwich":"/Images/sandwich.jpg"
+ "Veg Sandwich":"/Images/sandwich.jpg",
+ "Fries":"/Images/fries.jpg",
+ "Paratha":"/Images/paratha.jpg",
+ "Coffee":"/Images/coffee.jpg"
+
 };
 
 /* ===================================
