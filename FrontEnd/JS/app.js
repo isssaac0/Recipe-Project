@@ -11,14 +11,14 @@ const imageMap = {
  "Veg Biryani":"Images/biryani.jpg",
   "Burger":"Images/burger.jpg", 
   "Noodles":"Images/noodles.jpg", 
-  "Tea":"Images/tea.jpg",
-   "Samosa":"Images/samosa.jpg",
-    "Margherita Pizza":"Images/pizza.jpg",
-     "Kheer":"Images/kheer.jpg", 
-     "Fried Rice":"Images/friedrice.jpg", 
-     "Croissant":"Images/croissant.jpg",
-      "Sushi Rolls":"Images/sushi.jpg", 
-      "Tacos":"Images/tacos.jpg",
+"Tea":"Images/tea.jpg",
+"Samosa":"Images/samosa.jpg",
+"Margherita Pizza":"Images/pizza.jpg",
+"Kheer":"Images/kheer.jpg", 
+"Fried Rice":"Images/friedrice.jpg", 
+"Croissant":"Images/croissant.jpg",
+"Sushi Rolls":"Images/sushi.jpg", 
+"Tacos":"Images/tacos.jpg",
  "Chicken Alfredo Pasta":"Images/pasta.jpg", 
  "Fruit Custard":"Images/custard.jpg",
  "Masala Dosa":"Images/dosa.jpg",
@@ -80,8 +80,10 @@ container.innerHTML = "";
 recipes.forEach(r=>{
 
 const img =
-imageMap[r.title] || "images/default.jpg";
-
+r.imageUrl ||
+imageMap[r.title] ||
+"images/default.jpg";
+///Card Creation
 container.innerHTML += `
 <div class="card image-card"
 

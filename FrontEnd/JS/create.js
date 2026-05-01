@@ -74,7 +74,9 @@ category: document.getElementById("category")?.value || "",
 prepTime: document.getElementById("prepTime")?.value || "",
 description: document.getElementById("description")?.value || "",
 isVeg: document.getElementById("isVeg")?.checked || false,
-isPopular: document.getElementById("isPopular")?.checked || false
+isPopular: document.getElementById("isPopular")?.checked || false,
+videoLink:
+document.getElementById("videoLink")?.value || "",
 };
 
 localStorage.setItem(

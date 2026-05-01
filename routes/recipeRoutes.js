@@ -1,29 +1,45 @@
 const express = require("express");
 const router = express.Router();
+const { body } = require("express-validator");
 
 const {
-    createRecipe,
-    getRecipes,
-    deleteRecipe
+createRecipe,
+getRecipes,
+deleteRecipe
 } = require("../controllers/recipeController");
 
 const protect = require("../middleware/authMiddleware");
 const authorizeRoles = require("../middleware/roleMiddleware");
-const validate = require("../middleware/validateMiddleware");
 
-//Validators
-const { recipeValidation } = require("../validators/recipeValidator");
+/* CREATE RECIPE (logged in user) */
+router.post(
+"/",
+protect,
+[
+body("title")
+.notEmpty()
+.withMessage("Title is required"),
 
-// Create recipe (logged in users)
-router.post("/", protect, recipeValidation, validate, createRecipe);
+body("cuisine")
+.notEmpty()
+.withMessage("Cuisine is required"),
 
-// Get recipes (public)
+body("prepTime")
+.isNumeric()
+.withMessage("Prep time must be number")
+],
+createRecipe
+);
+
+/* GET RECIPES (public) */
 router.get("/", getRecipes);
 
-// Delete recipe (admin only)
-router.delete("/:id", protect, authorizeRoles("admin"), deleteRecipe);
-
-
-
+/* DELETE RECIPE (admin only) */
+router.delete(
+"/:id",
+protect,
+authorizeRoles("admin"),
+deleteRecipe
+);
 
 module.exports = router;
